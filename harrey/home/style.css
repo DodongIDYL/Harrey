@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Header {
+    height: 60px;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.Header .headerContainer {
+    height: inherit;
+    position: relative;
+    z-index: 5;
+}
+.Header .logoContainer, .Header .rightHeaderContent {
+    min-width: 135px;
+}
+
+
+.Header .logoContainer {
+    float: left;
+    height: inherit;
+    margin: 0 36px 0 32px;
+}
+
+.Header .logoLink {
+    position: relative;
+    display: block;
+    height: inherit;
+    width: 135px;
+}
+.Header .rightHeaderContent {
+    float: right;
+    height: inherit;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 32px;
+}
+
+.Header .rightHeaderContent .navItems {
+    float: right;
+}
+li, ol, ul {
+    list-style: none;
+}
+
+.Header .rightHeaderContent .navItem {
+    float: left;
+    position: relative;
+}
+.Header .rightHeaderContent .loginHeaderButton, .Header .rightHeaderContent .signupHeaderButton, .Header .rightHeaderContent .textHeaderButton {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -.38px;
+}
+.Light .Header .rightHeaderContent .loginHeaderButton {
+    color: #444;
+}
+.Header .rightHeaderContent .loginHeaderButton span, .Header .rightHeaderContent .signupHeaderButton span, .Header .rightHeaderContent .textHeaderButton span {
+    border-radius: 4px;
+    padding: 9px 12px 10px;
+}
+
+.Light .Header .rightHeaderContent .loginHeaderButton span {
+    background: #f6f6f6;
+}
+
+
+.Header .rightHeaderContent .signupHeaderButton {
+    margin-left: 8px;
+}
+
+.Light .Header .rightHeaderContent .signupHeaderButton {
+    color: #fff;
+}
+.Dark .Header .rightHeaderContent .signupHeaderButton span, .Light .Header .rightHeaderContent .signupHeaderButton span {
+    background: #1d8ffb;
+}
+
+.Header .centerHeaderContent {
+    float: none;
+    max-width: 526px;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.Header .searchForm form {
+    padding-top: 10px;
+    overflow: hidden;
+}
+.Header .searchForm .background {
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.Light .Header .searchForm .background {
+    background-color: rgba(24,24,24,.06);
+}
+.searchTray {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+.searchTray .searchTokenItem {
+    display: inline-block;
+    float: left;
+    height: 40px;
+}
+.searchTray .field {
+    float: left;
+}
+
+.Header .searchForm .field {
+    background: 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+    letter-spacing: -.42px;
+    padding: 5px 72px 6px 16px;
+    position: relative;
+    top: -1px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.Dark .visualSearchModal .mediaSimilarTitle, .Light .Header .searchForm .field, .Light .visualSearchModal .mediaSimilarTitle {
+    color: #333;
+}
