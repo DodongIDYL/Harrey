@@ -1,130 +1,37 @@
 *{
     margin: 0;
-    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
 }
 
-.Header {
-    height: 60px;
-    z-index: 6;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-.Header .headerContainer {
-    height: inherit;
-    position: relative;
-    z-index: 5;
-}
-.Header .logoContainer, .Header .rightHeaderContent {
-    min-width: 135px;
-}
-
-
-.Header .logoContainer {
-    float: left;
-    height: inherit;
-    margin: 0 36px 0 32px;
-}
-
-.Header .logoLink {
-    position: relative;
-    display: block;
-    height: inherit;
-    width: 135px;
-}
-.Header .rightHeaderContent {
-    float: right;
-    height: inherit;
-    position: relative;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin: 0 32px;
-}
-
-.Header .rightHeaderContent .navItems {
-    float: right;
-}
-li, ol, ul {
+a, ul{
+    text-decoration: none;
     list-style: none;
 }
 
-.Header .rightHeaderContent .navItem {
-    float: left;
-    position: relative;
-}
-.Header .rightHeaderContent .loginHeaderButton, .Header .rightHeaderContent .signupHeaderButton, .Header .rightHeaderContent .textHeaderButton {
-    height: 60px;
-    line-height: 60px;
-    display: block;
-    float: left;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: -.38px;
-}
-.Light .Header .rightHeaderContent .loginHeaderButton {
-    color: #444;
-}
-.Header .rightHeaderContent .loginHeaderButton span, .Header .rightHeaderContent .signupHeaderButton span, .Header .rightHeaderContent .textHeaderButton span {
-    border-radius: 4px;
-    padding: 9px 12px 10px;
+.header-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
 }
 
-.Light .Header .rightHeaderContent .loginHeaderButton span {
-    background: #f6f6f6;
+.logo-container .logoLink{
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: -2px;
 }
 
-
-.Header .rightHeaderContent .signupHeaderButton {
-    margin-left: 8px;
-}
-
-.Light .Header .rightHeaderContent .signupHeaderButton {
-    color: #fff;
-}
-.Dark .Header .rightHeaderContent .signupHeaderButton span, .Light .Header .rightHeaderContent .signupHeaderButton span {
-    background: #1d8ffb;
-}
-
-.Header .centerHeaderContent {
-    float: none;
-    max-width: 526px;
-    margin: 0 auto;
-    height: inherit;
-}
-
-.Header .searchForm form {
-    padding-top: 10px;
-    overflow: hidden;
-}
-.Header .searchForm .background {
+.searchForm{
     border-radius: 5px;
     height: 40px;
     width: 100%;
-    position: relative;
-    z-index: 2;
 }
 
-.Light .Header .searchForm .background {
-    background-color: rgba(24,24,24,.06);
-}
-.searchTray {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    z-index: 3;
-}
-.searchTray .searchTokenItem {
-    display: inline-block;
-    float: left;
-    height: 40px;
-}
-.searchTray .field {
-    float: left;
-}
-
-.Header .searchForm .field {
+.searchForm .field {
     background: 0 0;
     font-size: 16px;
     font-weight: 600;
@@ -132,13 +39,120 @@ li, ol, ul {
     line-height: 20px;
     letter-spacing: -.42px;
     padding: 5px 72px 6px 16px;
-    position: relative;
-    top: -1px;
-    right: 0;
-    left: 0;
     width: 100%;
-    z-index: 2;
+    background-color: rgba(24,24,24,.06);  
+    border: none;
+    cursor: text;
+    border-radius: 5px;
 }
-.Dark .visualSearchModal .mediaSimilarTitle, .Light .Header .searchForm .field, .Light .visualSearchModal .mediaSimilarTitle {
-    color: #333;
+
+.rightHeaderContent ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.navItems .loginHeaderButton{
+    color: #444;
+}
+
+.navItems button{
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navItems .signupHeaderButton{
+    background-color: #1d8ffb;
+    color: white;
+}
+
+.navItems button span{
+    padding: 9px 12px 10px;
+}
+
+/* body */
+.body{
+    width: 100%; 
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 34%, rgba(148,187,233,1) 100%);
+}
+
+.sectionContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90.7vh;
+    max-height: 100vh;
+    gap: 20rem;
+}
+
+.sectionContent {
+    max-width: 395px;
+    margin: 0 auto;
+}
+
+.sectionContent h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2px;
+    padding-bottom: 24px;
+    margin-top: -12px;
+    color: rgba(24,24,24,.86);
+}
+
+.sectionContent p {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -.1px;
+    margin-bottom: 26px;
+    color: rgba(24,24,24,.66);
+}
+
+.introGraphic_browserExtension {
+    display: block;
+    height: 506px;
+    width: 366px;
+    border-radius: 8px;
+    box-shadow: 0 3.67px 38.7px rgba(0,0,0,.11);
+}
+
+.introActionButton {
+    display: inline-block;
+    border-radius: 38px;
+    font-size: 16px;
+    line-height: 56px;
+    font-weight: 600;
+    letter-spacing: -.1px;
+    text-align: center;
+    margin: 40px 0 0;
+    height: 56px;
+    min-width: 220px;
+    color: #fff;
+    background-color: #181818;
+}
+
+/* hover */
+.navItems .signupHeaderButton:hover{
+    background-color: #1d90fba8;
+    color: white;
+}
+
+.navItems button:hover{
+    background-color: grey;
+    color: white;
+}
+
+.searchForm .field:hover {
+    background-color: rgba(24,24,24,.2);
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
